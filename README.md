@@ -5,9 +5,10 @@
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Flowchart](#flowchart)
-6. [IRC Meta](#irc-meta)
-   1. [@apple-fritter](#fritterz)'s IRC Repositories
+5. [Prerequisites](#prerequisites)
+6. [Flowchart](#flowchart)
+7. [IRC Meta](#irc-meta)
+   1. [IRC Repositories](#fritterz)
       1. [driftwood suite](#driftwood-suite-of-irc-analytics)
          - [driftwood utilities](#driftwood-utilities)
          - [driftwood native logging plugins](#driftwood-native-logging-plugins)
@@ -20,9 +21,9 @@
       3. [Rights and Dignity of Others](#respect-the-rights-and-dignity-of-other-users)
       4. [IRC Community and Channels](#respect-the-irc-community-and-channels)
       5. [Compatibility](#ensure-compatibility)
-7. [Contributing](#contributing)
-8. [Disclaimer](#disclaimer)
-9. [License](#license)
+8. [Contributing](#contributing)
+9. [Disclaimer](#disclaimer)
+10. [License](#license)
 
 ---
 
@@ -50,6 +51,16 @@ By maintaining an accurate and comprehensive log of flagged lines, Flotsam enabl
 2. Clone the Flotsam repository: `git clone https://github.com/apple-fritter/flotsam.git`
 3. Navigate to the project directory: `cd flotsam`
 4. Build the project: `cargo build --release`
+
+---
+
+## Prerequisites
+The following crates: regex and chrono.
+
+The `regex` crate provides regular expression support, which is essential for parsing and manipulating the log files.  
+The `chrono` crate is used for working with dates and timestamps, which can be helpful for generating the log file names.
+
+---
 
 ## Usage
 1. Run Flotsam with the log directory path as the argument:
