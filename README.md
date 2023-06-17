@@ -1,9 +1,5 @@
 # Flotsam - IRC Moderation Tool
 
-![Flotsam Logo](flotsam-logo.png)
-
----
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Features](#features)
@@ -33,7 +29,15 @@
 ## Introduction
 Flotsam is a powerful IRC moderation tool written in Rust. It aims to supplement the "[driftwood](https://github.com/apple-fritter/driftwood)" format of IRC logs by providing efficient log parsing and moderation capabilities for IRCops, channel operators, and data scientists alike, and is meant to pair closely with [jetsam](https://github.com/apple-fritter/jetsam), to aggregate a per-user metric of flagged contributions.
 
-![Flotsam Screenshot](flotsam-screenshot.png)
+The Flotsam program efficiently records and analyzes log data from IRC channels, providing valuable insights for moderation purposes. As the program processes the log files, it identifies flagged lines of content that require moderation. Additionally, it maintains a count of the flagged lines attributed to each user.
+
+Each flagged line is meticulously recorded and attributed to the user of origin. The details are stored in a tab-separated values (TSV) log file, ensuring easy readability and data retrieval. The log file is organized alphabetically by the user's name, allowing for quick access and reference.
+
+The recording process takes into account the entire log directory structure, recursively scanning through the log files. As the program encounters flagged lines, it increments the count associated with the respective user. This count provides valuable information about the extent of a user's contribution to content that may require suppression or further review.
+
+By maintaining an accurate and comprehensive log of flagged lines, Flotsam enables IRC operators, channel moderators, and data scientists to gain deeper insights into user behavior and take necessary actions to ensure a positive and safe environment within IRC channels.
+
+---
 
 ## Features
 - **Driftwood Format Parsing:** Flotsam can parse IRC logs in the Driftwood format, ensuring accurate extraction of log data.
